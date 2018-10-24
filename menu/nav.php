@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <img src="" alt="">
+    <img src="1517150783_9VZp2_5692fe46257331.584de4a452908.JPG" alt="">
     <nav id="nave">
         <ol>
             <li><a href="inicio.php" >INICIO</a> </li>
