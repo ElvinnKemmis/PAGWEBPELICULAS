@@ -1,0 +1,13 @@
+#nave li{
+    display: inline;
+    padding: 20px;
+   
+    
+}
+#nave {
+    background-color: black;
+    padding: 10px;
+}
+#nave a{
+    color:white;
+}

@@ -7,6 +7,10 @@
     <title>INDEX</title>
 </head>
 <body>
-    
+    <?php include 'menu/nav.php'?>
+    <section>
+        <h1>asjkdhasgdjkaskdasjk</h1>
+    </section>
+    <?php include 'menu/footer.php'?>
 </body>
 </html>

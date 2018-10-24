@@ -1,0 +1,1 @@
+<footer style="background-color: black; color: white; text-align:center; padding: 15px;">EK </footer>
