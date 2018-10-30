@@ -7,11 +7,12 @@
     <title>navegador</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
-    <img src="1517150783_9VZp2_5692fe46257331.584de4a452908.JPG" alt="">
+<body >
+
     <nav id="nave">
         <ol>
-            <li><a href="inicio.php" >INICIO</a> </li>
+            <li ><img id="img" src="wkYUX_Iq.JPG" style="width: 230px; eight: 320px;" ></li>
+            <li><a href="index.php" >INICIO</a> </li>
             <li><a href="categorias.php" >CATEGORIAS</a> </li>
             <li><a href="trillers.php" >TRILLERS</a> </li>
             <li><a href="foro.php" >FORO</a></li>
