@@ -12,7 +12,7 @@
         <section>
             <h1 style="text-align:center; font-family: fantasy;"> REGISTRESE</h1>
             <div >
-                <form  id="tabla" action="validacion_registro.php" method="post">
+                <form  id="tabla" action="procesar_registro.php" method="post">
                     <table>
                         <tr>
                             <h2 style=" font-family: fantasy;">DATOS PERSONALES</h2>

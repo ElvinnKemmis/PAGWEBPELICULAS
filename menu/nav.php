@@ -17,7 +17,7 @@
             <li><a href="trillers.php" >TRILLERS</a> </li>
             <li><a href="foro.php" >FORO</a></li>
             <li><a href="registrarse.php" >REGISTARSE</a> </li>
-            <li><a href="login.php">INICIAR SECCION</a> </li>
+            <li><a href="iniciar_seccion.php">INICIAR SECCION</a> </li>
             
         </ol>
     
