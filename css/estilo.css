@@ -8,10 +8,36 @@
     background-color: black;
     padding: 10px;
 }
-#nave a{
-    color:white;
+#nave ol{
+    
+    margin: 0px;
 }
 
-#img{
+#nave a{
+    color:white;
+    text-decoration: none;
+}
+
+#cat ul{
+    display: inline;
     
 }
+#cat {
+    background-color: black;
+    padding: 5px;
+    
+
+}
+#cat a{
+    color: rgb(204, 207, 207);
+    text-decoration: none;
+   
+}
+#cat ol{
+    margin: 0;
+    margin: 8px;
+    text-align: right;
+    
+}
+
+
