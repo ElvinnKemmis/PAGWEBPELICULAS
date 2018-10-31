@@ -9,7 +9,7 @@ $u=$_POST["usuario"];
 $p=$_POST["contraseña"];
 
 #PROCESAR
-$pa=sha1($p);
+$p=sha1($p);
 $db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
 $stmt=$db->query("INSERT INTO usuarios VALUES(NULL,'$n','$a','$t','$d','$c','$u','$p')");
 
