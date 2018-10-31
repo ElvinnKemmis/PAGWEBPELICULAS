@@ -22,6 +22,6 @@ if($validacion){
     header('Location:index.php');
 }
 else{
-    header('Location: logi.php?error=1');
+    header('Location: iniciar_seccion.php?error=1');
 }
 ?>
