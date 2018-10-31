@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,11 +56,11 @@
                             <h2 style=" font-family: fantasy;">DATOS DE LA PAGINA</h2>
                             <td>
                                 <label for="">USUARIO</label>
-                                <input type="text">
+                                <input type="text" name="usuario">
                             </td>
                             <td>
                                 <label for="">CONTRASEÑA</label>
-                                <input type="text">
+                                <input type="password" name="contraseña">
                             </td>
                             
                         </tr>
