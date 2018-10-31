@@ -11,7 +11,7 @@ $p=$_POST["contraseña"];
 #PROCESAR
 $pa=sha1($p);
 $db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
-$stmt=$db->query("INSERT INTO usuarios VALUES(NULL,'$n','$a','$n','$t','$d','$c','$pa')");
+$stmt=$db->query("INSERT INTO usuarios VALUES(NULL,'$n','$a','$t','$d','$c','$u','$p')");
 
 session_start();
 $_SESSION["nombre"]=$n;

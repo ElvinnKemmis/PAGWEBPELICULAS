@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +16,20 @@
             <li><a href="index.php" >INICIO</a> </li>
             <li><a href="categoriass.php" >CATEGORIAS</a> </li>
             <li><a href="trillers.php" >TRAILER</a> </li>
-            <li><a href="foro.php" >FORO</a></li>
-            <li><a href="registrarse.php" >REGISTARSE</a> </li>
-            <li><a href="iniciar_seccion.php">INICIAR SECCION</a> </li>
+
+            <?php if(isset($_SESSION["usuario"])){?>
+                <li><a href="foro.php" >FORO</a></li>
+            <?php }?>
+
+            <?php if(isset($_SESSION["usuario"])){?>
+                <li><a href="cerrar_session.php" >CERRAR SECCION    (<?php echo $_SESSION["usuario"]?>)</a> </li>
+            <?php } else { ?>
+                <li><a href="registrarse.php">REGISTRARASE</a></li>
+                <li><a href="iniciar_seccion.php">INICIAR SESION</a></li>
+
+            <?php } ?>
+
+            
             
         </ol>
     
