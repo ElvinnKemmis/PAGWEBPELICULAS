@@ -15,11 +15,11 @@
             <h2 style=" text-align:center; font-family: fantasy;">INGRESE SUS DATOS PARA INICIAR SECCION </h2>
                 <td>
                     <label for="">USUARIO</label>
-                    <input type="text">
+                    <input type="text" name="usuario">
                 </td>
                 <td>
                     <label for="">CONTRASEÑA</label>
-                    <input type="text">
+                    <input type="password" name="contraseña">
                 </td>
                                 
         </tr>

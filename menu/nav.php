@@ -22,10 +22,10 @@
             <?php }?>
 
             <?php if(isset($_SESSION["usuario"])){?>
-                <li><a href="cerrar_session.php" >CERRAR SECCION    (<?php echo $_SESSION["usuario"]?>)</a> </li>
+                <li><a href="cerrar_session.php" >CERRAR SESIÓN    (<?php echo $_SESSION["usuario"]?>)</a> </li>
             <?php } else { ?>
                 <li><a href="registrarse.php">REGISTRARASE</a></li>
-                <li><a href="iniciar_seccion.php">INICIAR SESION</a></li>
+                <li><a href="iniciar_seccion.php">INICIAR SESIÓN</a></li>
 
             <?php } ?>
 
