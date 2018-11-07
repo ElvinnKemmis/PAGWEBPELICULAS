@@ -22,11 +22,11 @@ session_start();
                             <td>
                             
                                 <label for="">NOMBRE</label>
-                                <input type="text" name="nombre">
+                                <input type="text" name="nombre" placeholder="*">
                             </td>
                             <td>
                                 <label for="">APELLIDOS</label>
-                                <input type="text" name="apellido">
+                                <input type="text" name="apellido" placeholder="*">
                             </td>
                         </tr>
                     </table>
@@ -46,7 +46,7 @@ session_start();
                             
                             <td>
                                 <label for="">CORREO</label>
-                                <input type="email" name="correo">
+                                <input type="email" name="correo" placeholder="*">
                             </td>
                             
                         </tr>
@@ -56,11 +56,11 @@ session_start();
                             <h2 style=" font-family: fantasy;">DATOS DE LA PAGINA</h2>
                             <td>
                                 <label for="">USUARIO</label>
-                                <input type="text" name="usuario">
+                                <input type="text" name="usuario" placeholder="*">
                             </td>
                             <td>
                                 <label for="">CONTRASEÑA</label>
-                                <input type="password" name="contraseña">
+                                <input type="password" name="contraseña" placeholder="*">
                             </td>
                             
                         </tr>
