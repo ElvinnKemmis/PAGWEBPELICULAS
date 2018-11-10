@@ -1,14 +1,21 @@
 <?php 
 session_start();
-
+$db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
 #ENTRADA
 
-$i=addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+$nombre_imagen=$_FILES['imagen']['name'];
+$archivo=$_FILES['imagen']['tmp_name'];
+$tipo=$_FILES['imagen']['type'];
+$tamaño=$_FILES['imagen']['size'];
+
+$carpeta_destino="imagenes_foro/".$nombre_imagen;
 $u=$_SESSION["usuario"];
 
 #PROCESAR
-$db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
-$stmt=$db->query("INSERT INTO img VALUES(NULL,'$i','$u',SYSDATE())");
+$subido= move_uploaded_file($archivo,$carpeta_destino);
+
+$stmt=$db->query("INSERT INTO img VALUES(NULL,'$subido','$u',SYSDATE())");
+
 
 session_start();
 
