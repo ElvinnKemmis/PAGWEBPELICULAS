@@ -14,7 +14,7 @@ session_start();
 <body>
     <?php include 'menu/nav.php'?>
     <section >
-        <div id="portadas">
+        <div id="cont">
 
             <div >
                 <a href="https://repelis.live/11/monster-party-2018/"><img src="https://image.tmdb.org/t/p/w154/db6f237Ed3b8uigSzyRXpF4GxvP.jpg" alt=""></a>
