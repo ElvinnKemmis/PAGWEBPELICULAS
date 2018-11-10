@@ -49,7 +49,6 @@
 #bot{
     margin: 15px;
 }
-#cont {
-     display: flex;
-     border: 2px solid red;
- }
+#poster{
+    padding: 25px;
+}
