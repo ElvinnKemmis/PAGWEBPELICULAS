@@ -49,3 +49,7 @@
 #bot{
     margin: 15px;
 }
+
+#portadas {
+    display: flex;
+}
