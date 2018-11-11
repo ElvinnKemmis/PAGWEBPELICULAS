@@ -20,8 +20,8 @@ $img=$stmt->fetchAll();
 <body>
     <?php include 'menu/nav.php'?>
 
-    <h1 style="font-family: fantasy; text-align:center;">SECCION FORO</h1>
-    <p style="font-family: fantasy; font-size: 25px;">Escriba en la caja de comentarios para poder comentar:</p>
+    <h1 style="font-family: fantasy; text-align:center; background-color: black; color:white; margin: 0px; padding:25px;">SECCION FORO</h1>
+    <p style="font-family: fantasy; font-size: 18px;background-color: black; color:white; margin: 0px; padding:25px;">Escriba en la caja de comentarios para poder comentar:</p>
     
     <div style="background-color:black; color:white; padding:15px; text-align:right;">
         <form action="procesar_imagen.php" method="post" enctype="multipart/form-data">

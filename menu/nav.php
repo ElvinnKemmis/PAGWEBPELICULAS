@@ -20,6 +20,10 @@
             <?php if(isset($_SESSION["usuario"])){?>
                 <li><a href="foro.php" >FORO</a></li>
             <?php }?>
+            
+            <?php if(isset($_SESSION["usuario"])){?>
+                <li><a href="admin.php" >SUBIR PELICULA</a></li>
+            <?php }?>
 
             <?php if(isset($_SESSION["usuario"])){?>
                 <li><a href="cerrar_session.php" >CERRAR SESIÓN    (<?php echo $_SESSION["usuario"]?>)</a> </li>
@@ -28,8 +32,6 @@
                 <li><a href="iniciar_seccion.php">INICIAR SESIÓN</a></li>
 
             <?php } ?>
-
-            
             
         </ol>
     

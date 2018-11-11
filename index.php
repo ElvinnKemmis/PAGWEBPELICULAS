@@ -1,5 +1,9 @@
 <?php
 session_start();
+$db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
+$stmt=$db->query("SELECT* FROM peliculas  ORDER BY id DESC");
+$peliculas=$stmt->fetchAll();
+
 ?>
 
 <!DOCTYPE html>
@@ -13,35 +17,23 @@ session_start();
 </head>
 <body>
     <?php include 'menu/nav.php'?>
-    <section >
-        <div style="display:flex;">
 
-            <div id="poster">
-                <a href="https://repelis.live/11/monster-party-2018/"><img src="https://image.tmdb.org/t/p/w154/db6f237Ed3b8uigSzyRXpF4GxvP.jpg" alt=""></a>
-                
-            </div id="poster">
+    <section style=" background-color:black; color:white;">
+        <div  style=" width: 1330px;display: flex; border: 1px solid red;  ">
 
-            <div id="poster">
-                <a href=""><img src="https://image.tmdb.org/t/p/w154/4nKoB6wMVXfsYgRZK5lHZ5VMQ6J.jpg" alt=""></a>
-            </div>
-
-            <div id="poster">
-                <a href="https://repelis.live/11/monster-party-2018/"><img src="https://image.tmdb.org/t/p/w154/db6f237Ed3b8uigSzyRXpF4GxvP.jpg" alt=""></a>
-            </div>
-
-            <div id="poster">
-                <a href=""><img src="https://image.tmdb.org/t/p/w154/4nKoB6wMVXfsYgRZK5lHZ5VMQ6J.jpg" alt=""></a>
-            </div>
-            <div id="poster">
-                <a href="https://repelis.live/11/monster-party-2018/"><img src="https://image.tmdb.org/t/p/w154/db6f237Ed3b8uigSzyRXpF4GxvP.jpg" alt=""></a>
-            </div>
-
-            <div id="poster">
-                <a href=""><img src="https://image.tmdb.org/t/p/w154/4nKoB6wMVXfsYgRZK5lHZ5VMQ6J.jpg" alt=""></a>
-            </div>
-         
-        </div>
+        
+            <?php foreach($peliculas as $p){ ?>
+                <div style="padding:20px;">       
+                    <img style="width: 320px; eight: 420px;  " src="data:image/jpg;base64, <?php echo base64_encode($p["poster"]); ?>"> 
+                    </br>
+                    <strong><p  style="font-family: fantasi; font-size: 12px;"> Duración: <?php echo  $p["duracion"]?> horas</p></strong>
+                    <strong><p  style="font-family: fantasi; font-size: 12px; "> Titulo: <?php echo  $p["titlulo"]?> </p></strong>
+                    <strong><p  style="font-family: fantasi; font-size: 12px; "> Fecha Estreno: <?php echo  $p["estreno"]?> </p</strong>           
+                </div>               
+            <?php }?>
+        </div>   
     </section>
+    
     <?php include 'menu/footer.php'?>
 </body>
 </html>
