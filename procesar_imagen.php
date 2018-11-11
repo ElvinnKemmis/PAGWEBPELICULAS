@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$i= addcslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+$i= addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 $u=$_SESSION['usuario'];
 
 $db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
