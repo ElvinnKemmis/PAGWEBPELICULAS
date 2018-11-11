@@ -1,20 +1,44 @@
 <?php
 session_start();
+
+$id=$_POST["id"];
+
+$db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
+$stmt=$db->query("SELECT* FROM peliculas WHERE id='$id' ");
+$peliculas=$stmt->fetchAll();
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>visualiacion</title>
 </head>
 <body>
+
     <?php include 'menu/nav.php'?>
-    <section>
-        <div><img src="https://www.youtube.com/watch?v=XKU7EVIRw7s" alt="">EL REJOJ E LA PARED</div>
+
+
+    <section style=" background-color:black; color:white;">
+        <div  style=" width: 1230px;display: flex; flex-wrap: wrap;padding-left:96px;">
+
+                
+                    <?php foreach($peliculas as $p){ ?>
+                        <div style="padding:20px;"> 
+           
+                            <img style="width:230px; eight: 320px;  " src="data:image/jpg;base64, <?php echo base64_encode($p["poster"]); ?>">
+                            </br>
+                            <strong><p  style="font-family: fantasi; font-size: 12px; "> Titulo: <?php echo  $p["titlulo"]?> </p></strong>
+                            <strong><p  style="font-family: fantasi; font-size: 12px;"> Duración: <?php echo  $p["duracion"]?> horas</p></strong>
+                            <strong><p  style="font-family: fantasi; font-size: 12px;"> Genero: <?php echo  $p["genero"]?> </p></strong>
+                            <strong><p  style="font-family: fantasi; font-size: 12px; "> Fecha Estreno: <?php echo  $p["estreno"]?> </p></strong>           
+                        </div>               
+                <?php }?>
+            
+        </div>   
     </section>
+
     <?php include 'menu/footer.php'?>
 
 </body>
