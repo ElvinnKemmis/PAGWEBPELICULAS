@@ -15,6 +15,6 @@ $stmt=$db->query("INSERT INTO peliculas VALUES(NULL,'$t','$i','$d','$e','$g','$t
 
 session_start();
 	
-header('Location:datos_subidos.php');
+header('Location:index.php');
 
 ?>

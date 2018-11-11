@@ -10,17 +10,17 @@
 </head>
 <body >
 
-    <nav id="nave">
+    <nav id="nave" style=" border-bottom: 1px solid red">
         <ol>
             <li ><img id="img" src="wkYUX_Iq.JPG" style="width: 230px; eight: 320px;" ></li>
             <li><a href="index.php" >INICIO</a> </li>
-            <li><a href="categoriass.php" >CATEGORIAS</a> </li>
+            <li><a href="categorias.php" >CATEGORIAS</a> </li>
             <li><a href="trillers.php" >TRAILER</a> </li>
 
             <?php if(isset($_SESSION["usuario"])){?>
                 <li><a href="foro.php" >FORO</a></li>
             <?php }?>
-            
+
             <?php if(isset($_SESSION["usuario"])){?>
                 <li><a href="admin.php" >SUBIR PELICULA</a></li>
             <?php }?>

@@ -1,24 +1,12 @@
 <?php
 session_start();
 $db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
-$stmt=$db->query("SELECT* FROM peliculas  ORDER BY id DESC");
+$stmt=$db->query("SELECT* FROM peliculas WHERE (genero LIKE 'ACCION')");
 $peliculas=$stmt->fetchAll();
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>INDEX</title>
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body>
-    <?php include 'menu/nav.php'?>
-
-    <section style=" background-color:black; color:white;">
+<?php include 'menu/nav.php'?>
+<section style=" background-color:black; color:white;">
         <div  style=" width: 1230px;display: flex; flex-wrap: wrap;padding-left:96px;">
 
         
@@ -35,7 +23,4 @@ $peliculas=$stmt->fetchAll();
             <?php }?>
         </div>   
     </section>
-    
-    <?php include 'menu/footer.php'?>
-</body>
-</html>
+<?php include 'menu/footer.php'?>

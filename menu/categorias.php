@@ -1,3 +1,10 @@
+<?php
+
+$db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
+$stmt=$db->query("SELECT* FROM peliculas  ORDER BY id DESC");
+$peliculas=$stmt->fetchAll();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,15 +16,19 @@
 </head>
 <body>
    
-    <div id="cat">
+    <div id="cat" >
         <ol >
-            <ul><a href="">AVENTURA</a> </ul>
-            <ul><a href="">ANIMADAS</a></ul>
-            <ul><a href="">ACCION</a></ul>
-            <ul><a href="">COMEDIA</a></ul>
-            <ul><a href="">CIENCIA FICCION</a></ul>
-            <ul><a href="">TERROR</a></ul>
-            <ul><a href="">MUSICAL</a></ul>
+           
+                
+                <ul><a href="av.php">AVENTURA</a> </ul>
+                <ul><a href="an.php">ANIMADAS</a></ul>
+                <ul><a href="ac.php">ACCION</a></ul>
+                <ul><a href="co.php">COMEDIA</a></ul>
+                <ul><a href="cf.php">CIENCIA FICCION</a></ul>
+                <ul><a href="t.php">TERROR</a></ul>
+                <ul><a href="m.php">MUSICAL</a></ul>
+                <ul><a href="r.php">ROMANTICA</a></ul>     
+            
 
 
         </ol>

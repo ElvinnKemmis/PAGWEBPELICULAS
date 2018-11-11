@@ -43,6 +43,7 @@ session_start();
                 <option>CIENCIA FICCION</option>
                 <option>TERROR</option>
                 <option>MUSICAL</option>
+                <option>ROMANTICA</option>
             </select>
             </br>
             </br>

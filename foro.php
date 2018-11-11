@@ -19,11 +19,11 @@ $img=$stmt->fetchAll();
 </head>
 <body>
     <?php include 'menu/nav.php'?>
-
+    <section style="background-color: black; color:white;">
     <h1 style="font-family: fantasy; text-align:center; background-color: black; color:white; margin: 0px; padding:25px;">SECCION FORO</h1>
-    <p style="font-family: fantasy; font-size: 18px;background-color: black; color:white; margin: 0px; padding:25px;">Escriba en la caja de comentarios para poder comentar:</p>
+    <p style=" font-size: 18px;background-color: black; color:white; margin: 0px; padding:25px;">Escriba en la caja de comentarios para poder comentar:</p>
     
-    <div style="background-color:black; color:white; padding:15px; text-align:right;">
+    <div style="background-color:black; color:white; padding:15px; text-align:center;">
         <form action="procesar_imagen.php" method="post" enctype="multipart/form-data">
             <label >SI DESEA SUBIR UNA IMAGEN POR FAVOR SELECIONE LA IMAGEN EN FORMATO JPG</label>
             <input type="file" name="imagen" >
@@ -33,11 +33,11 @@ $img=$stmt->fetchAll();
     </div>
     
     <form   action="procesar_foro.php" method="post">
-        <table > 
-            <tr>
-                <td><textarea name="comentario" rows="6" cols="200"></textarea></td>
+        <table style="margin-left:30%;"> 
+            <tr >
+                <td ><textarea name="comentario" rows="6" cols="80"></textarea></td>
             </tr>
-                <td><button type="submit">COMENTAR</button></td>
+                <td style="padding-left:45%;" ><button type="submit">COMENTAR</button></td>
         </table>
         
     </form>
@@ -45,7 +45,7 @@ $img=$stmt->fetchAll();
     </br>
     <section style="display: flex; " id="img_conte" >
         <div id="imge" >
-            <h1 style="font-family: fantasy; text-align:center;">IMAGENES</h1>
+            <h1 style="text-align:center;">IMAGENES</h1>
 
             <?php foreach($img as $i){ ?>
                 <div style="margin:15px;">
@@ -68,11 +68,11 @@ $img=$stmt->fetchAll();
                      
             
         <div id="conte">    
-               <h1 style="font-family: fantasy; text-align:center">COMENTARIOS</h1>
+               <h1 style="text-align:center">COMENTARIOS</h1>
                 <?php foreach($comentario as $c){ ?>
-                        <div style="border: 2px solid black; padding: 6px;margin:9px;">
+                        <div style="border: 2px solid red; padding: 6px;margin:9px;">
                                <strong><p><?php echo $c["comenta"] ?></p></strong>
-                                <p  style="font-family: fantasi; font-size: 12px; color: blue;">Publicado por <?php echo $c["usuario"] ?> el <?php echo $c["fecha"] ?></p>
+                                <p  style="font-family: fantasi; font-size: 12px; color: white;">Publicado por <?php echo $c["usuario"] ?> el <?php echo $c["fecha"] ?></p>
 
                                 <form action="borrar_comentario.php" method="post">
                                     <?php if($_SESSION["usuario"] == $c["usuario"]) {?>
@@ -84,6 +84,7 @@ $img=$stmt->fetchAll();
                 <?php }?>
         
         </div>
+    </section>
     </section>
     <?php include 'menu/footer.php'?>
 </body>
