@@ -36,9 +36,7 @@
 #cat ol{
     margin: 0;
     margin: 8px;
-    text-align: right;
-    
-    
+    text-align: right;  
 }
 
 #tabla {
@@ -51,4 +49,19 @@
 }
 #poster{
     padding: 25px;
+}
+#img_conte{
+    padding: 15px;
+    
+    
+}
+#imge{
+    padding: 15px;
+    width: 50%;
+   
+}
+#conte{
+    padding: 15px;
+    width: 50%;
+    
 }
