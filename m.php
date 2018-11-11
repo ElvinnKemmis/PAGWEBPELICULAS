@@ -1,7 +1,7 @@
 <?php
 session_start();
 $db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
-$stmt=$db->query("SELECT* FROM peliculas WHERE (genero LIKE '&usi%')");
+$stmt=$db->query("SELECT* FROM peliculas WHERE (genero LIKE 'MUSI%')");
 $peliculas=$stmt->fetchAll();
 
 ?>
