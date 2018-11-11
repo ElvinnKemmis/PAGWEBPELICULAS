@@ -32,7 +32,8 @@
                 <li><a href="iniciar_seccion.php">INICIAR SESIÓN</a></li>
 
             <?php } ?>
-            
+
+        
         </ol>
     
     </nav>

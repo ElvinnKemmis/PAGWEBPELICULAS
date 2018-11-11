@@ -5,6 +5,7 @@ $stmt=$db->query("SELECT* FROM peliculas WHERE (genero LIKE 'COME%')");
 $peliculas=$stmt->fetchAll();
 
 ?>
+<div  style=" background-color:black; color:white; padding:15px; text-align:center;"><a  style=" background-color:black; color:white; text-decoration: none ; " href="categorias.php">RETORNAR </a></div>
 <?php include 'menu/nav.php'?>
 <section style=" background-color:black; color:white;">
         <div  style=" width: 1230px;display: flex; flex-wrap: wrap;padding-left:96px;">
