@@ -6,7 +6,6 @@ $comentario=$stmt->fetchAll();
 
 $stmt=$db->query("SELECT* FROM img  ORDER BY id DESC");
 $img=$stmt->fetchAll();
-
 ?>
 
 <!DOCTYPE html>
@@ -31,16 +30,16 @@ $img=$stmt->fetchAll();
         
     </form>
 
-    <form action="procesar_imagen.php" method="post" enctype="multipar/form-data">
+    <form action="procesar_imagen.php" method="post" enctype="multipart/form-data">
         <label >SELECIONE IMAGEN A SUBIR</label>
-        <input type="file" name="imagen" required>
+        <input type="file" name="imagen" >
         <button type="submit">ENVIAR</button>
     </form>
 
     <?php foreach($img as $i){ ?>
         <table>
             <tr>
-                <td> <p><?php echo $i["imagen"] ?></p></td>
+                <td><img src="data:image/jpg;base64, <?php echo base64_encode($i["imagen"]); ?>"> </td>
                 <td> <p  style="font-family: fantasi; font-size: 12px; color: blue;"><?php echo $i["usuario"] ?></p></td>
                 <td><p style="font-family: fantasi; font-size: 12px; color: blue;"><?php echo $i["fecha"] ?></p></td>
 
@@ -54,6 +53,7 @@ $img=$stmt->fetchAll();
             </tr>
         
         </table>
+
     <?php }?>
 
 
