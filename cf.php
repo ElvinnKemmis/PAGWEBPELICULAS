@@ -14,7 +14,10 @@ $peliculas=$stmt->fetchAll();
             <?php foreach($peliculas as $p){ ?>
                 <div style="padding:20px;"> 
                           
-                    <img style="width:230px; eight: 320px;  " src="data:image/jpg;base64, <?php echo base64_encode($p["poster"]); ?>"> 
+                    <form action="visualizacion.php" method="post">    
+                            <input type="hidden" name="id" value="<?php echo $p["id"] ?>"> 
+                            <button type="submit " > <img style="width:230px; eight: 320px;  " src="data:image/jpg;base64, <?php echo base64_encode($p["poster"]); ?>"></button>
+                    </form>   
                     </br>
                     <strong><p  style="font-family: fantasi; font-size: 12px; "> Titulo: <?php echo  $p["titlulo"]?> </p></strong>
                     <strong><p  style="font-family: fantasi; font-size: 12px;"> Duración: <?php echo  $p["duracion"]?> horas</p></strong>

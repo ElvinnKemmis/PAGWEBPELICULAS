@@ -51,6 +51,10 @@ session_start();
             <input type="text" name="trailer">
             </br>
             </br>
+            <label >Sinopsis:</label>
+            <textarea name="descrip" rows="6" cols="80"></textarea>
+            </br>
+            </br>
             <button type="submit">SUBIR PELICULA</button>
         </form>
     
