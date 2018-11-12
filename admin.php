@@ -47,8 +47,12 @@ session_start();
             </select>
             </br>
             </br>
-            <label >Trailer(Link del Video promocional copiar link del apartado de compartir video en youtube):</label>
+            <label >Trailer(copiar link del apartado de compartir video en youtube):</label>
             <input type="text" name="trailer">
+            </br>
+            </br>
+            <label >Película(Link del video):</label>
+            <input type="text" name="pelicula">
             </br>
             </br>
             <label >Sinopsis:</label>

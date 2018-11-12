@@ -46,10 +46,13 @@ $peliculas=$stmt->fetchAll();
                 <?php }?>
         </div>   
     </section>
-    <section  style=" background-color:black; color:white; margin:0; padding 15px;">
-        <h1 style="text-align: center; margin:0; " >VISUALIZADOR</h1> 
-         
-
+    <section  style=" background-color:black; color:white; margin:0; ">
+        <?php foreach($peliculas as $p){ ?>
+            <h1 style="text-align: center; margin:0; " >VISUALIZADOR</h1> 
+            <div style=" padding:5% 20% 0 25%;">
+                <iframe src="<?php echo  $p["peli"]?>" scrolling="no" frameborder="0" width="700" height="430" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+            </div>
+        <?php }?>
     </section>
 
     <?php include 'menu/footer.php'?>
