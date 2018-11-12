@@ -50,7 +50,10 @@ $peliculas=$stmt->fetchAll();
     </section>
     <section  style=" background-color:black; color:white; margin:0; ">
         <?php foreach($peliculas as $p){ ?>
+            </br>
+            </br>
             <h1 style="text-align: center; margin:0; " >VISUALIZADOR</h1> 
+            </br>
             <div style=" padding:5% 20% 0 25%;">
                 <iframe src="<?php echo  $p["peli"]?>" scrolling="no" frameborder="0" width="700" height="430" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
             </div>
