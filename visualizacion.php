@@ -27,21 +27,23 @@ $peliculas=$stmt->fetchAll();
                         <div style="padding:20px;"> 
            
                             <img style="width:230px; eight: 320px;  " src="data:image/jpg;base64, <?php echo base64_encode($p["poster"]); ?>">
+                            
                             <strong><p  style="font-family: fantasi; font-size: 12px; "> Subido por: <?php echo  $p["usuario"]?> </p></strong>
                             <strong><p  style="font-family: fantasi; font-size: 12px; "> Fecha de subida: <?php echo  $p["fecha_publi"]?> </p></strong>
                             </br>
                                  
                         </div> 
 
-                        <div style="padding:5% 15% 0 15%; font-size: 40px;">
-
+                        <div style="padding:5% 15% 0 15%; font-size: 40px; display flex;">
+                        <iframe src="<?php echo  $p["triller"]?>" scrolling="no" frameborder="0" width="630" height="230" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
                             <strong><p  style="font-family: fantasi;  font-size: 16px; "> DESCRIPCIÓN: <?php echo  $p["descripcion"]?> </p></strong>              
                             </br>
            
                             <strong><p  style=" font-size: 12px; "> Titulo: <?php echo  $p["titlulo"]?> </p></strong>
                             <strong><p  style=" font-size: 12px;"> Duración: <?php echo  $p["duracion"]?> horas</p></strong>
                             <strong><p  style=" font-size: 12px;"> Genero: <?php echo  $p["genero"]?> </p></strong>
-                            <strong><p  style="font-size: 12px; "> Fecha Estreno: <?php echo  $p["estreno"]?> </p></strong>      
+                            <strong><p  style="font-size: 12px; "> Fecha Estreno: <?php echo  $p["estreno"]?> </p></strong>  
+                                
                         </div>
                 <?php }?>
         </div>   
