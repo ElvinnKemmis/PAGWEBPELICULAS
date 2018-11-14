@@ -1,1 +1,1 @@
-<footer style="background-color: black; color: white; text-align:center; padding: 15px;">CORPORATION(EK) TEFN: +51(01)777-555 </footer>
+<footer style="background-color: black; color: white; text-align:center; padding: 15px; border-top: 2px solid red;">CORPORATION(EK) TEFN: +51(01)777-555 </footer>
