@@ -35,7 +35,7 @@ session_start();
                             <h2 >DATOS ADICIONALES</h2>
                             <td>
                                 <label for="">TELEFONO</label>
-                                <input type="...." name="telefono" placeholder="INGRESE SU TELEFONO "> 
+                                <input type="text" name="telefono" placeholder="INGRESE SU TELEFONO "> 
                             </td>
                             <td>
                                 <label for="">DIRECCION</label>
@@ -70,6 +70,7 @@ session_start();
                         </tr>
                     </table>
                     <div id="bot">
+                        
                         <button type="submit">REGISTRARSE</button>
                     
                     </div>

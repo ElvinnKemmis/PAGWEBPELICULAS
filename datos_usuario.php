@@ -43,10 +43,10 @@ $usuarios=$stmt->fetchAll();
                 <div style=" margin-left: 10%;">
                     <img style="width: 230px; height:320px; " src="data:image/jpg;base64, <?php echo base64_encode($u["perfil"]); ?>">
                 </div>
+                
         </section>
         <?php }?>
-
-    </section>
+       
     <?php include 'menu/footer.php'?>
 </body>
 </html>
