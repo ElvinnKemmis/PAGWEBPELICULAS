@@ -1,5 +1,6 @@
 <?php 
 #ENTRADA
+$i= addslashes(file_get_contents($_FILES['perfil']['tmp_name']));
 $n=$_POST["nombre"];
 $a=$_POST["apellido"];
 $t=$_POST["telefono"];
@@ -11,7 +12,7 @@ $p=$_POST["contraseña"];
 #PROCESAR
 $p=sha1($p);
 $db = new PDO('mysql:host=localhost;dbname=paginawebpeli; charset=utf8mb4', 'root', ''); 
-$stmt=$db->query("INSERT INTO usuarios VALUES(NULL,'$n','$a','$t','$d','$c','$u','$p')");
+$stmt=$db->query("INSERT INTO usuarios VALUES(NULL,'$n','$a','$t','$d','$c','$u','$p','$i')");
 
 session_start();
 $_SESSION["nombre"]=$n;

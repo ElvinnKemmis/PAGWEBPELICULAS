@@ -1,0 +1,11 @@
+#t1 td{
+    padding: 15px;
+}
+#c{
+    display: flex;
+    padding: 8%;
+}
+#cont{
+    background-color:black; 
+    color:white;
+}

@@ -26,14 +26,18 @@
             <?php }?>
 
             <?php if(isset($_SESSION["usuario"])){?>
+                <li><a name="id" href="datos_usuario.php?usuario=<?php echo $_SESSION["usuario"];?>" >DATOS USUARIO</a></li>
+                
+            <?php }?>
+        
+            <?php if(isset($_SESSION["usuario"])){?>
                 <li><a href="cerrar_session.php" >CERRAR SESIÓN    (<?php echo $_SESSION["usuario"]?>)</a> </li>
             <?php } else { ?>
                 <li><a href="registrarse.php">REGISTRARASE</a></li>
                 <li><a href="iniciar_seccion.php">INICIAR SESIÓN</a></li>
 
             <?php } ?>
-
-        
+            
         </ol>
     
     </nav>

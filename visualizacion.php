@@ -36,7 +36,7 @@ $peliculas=$stmt->fetchAll();
 
                         <div style="padding:5% 15% 0 15%; font-size: 40px; display flex;">
                         <iframe src="<?php echo  $p["triller"]?>" scrolling="no" frameborder="0" width="630" height="230" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-                            <strong><p  style="font-family: fantasi;  font-size: 16px; "> DESCRIPCIÓN: <?php echo  $p["descripcion"]?> </p></strong>              
+                            <strong><p  style="font-family: fantasi;  font-size: 16px; "> DESCRIPCIÓN: <?php echo  nl2br($p["descripcion"])?> </p></strong>              
                             </br>
            
                             <strong><p  style=" font-size: 12px; "> Titulo: <?php echo  $p["titlulo"]?> </p></strong>
